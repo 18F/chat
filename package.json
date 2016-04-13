@@ -1,0 +1,9 @@
+{
+  "name": "chat",
+  "private": true,
+  "main": "index.js",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "slackin": "^0.8.3"
+  }
+}
