@@ -1,7 +1,7 @@
 # based on https://github.com/pivotal-cf/slackin/wiki/Cloud-Foundry#create-an-application-manifest
 applications:
 - name: chat
-  host: chat2
+  host: chat
   domain: 18f.gov
   instances: 2
   memory: 256M
