@@ -3,7 +3,11 @@
   "private": true,
   "main": "index.js",
   "license": "CC0-1.0",
+  "engines": {
+    "node": "5.x"
+  },
   "dependencies": {
+    "gulp": "^3.9.1",
     "slackin": "^0.8.3"
   }
 }
