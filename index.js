@@ -11,6 +11,7 @@ require('slackin').default({
   token: token,
   interval: 6000,
   org: '18f',
+  coc: 'https://github.com/18F/code-of-conduct#readme',
   channels: channels.join(',')
 }).listen(port, function() {
   console.log(`Listening on port ${port}.`);

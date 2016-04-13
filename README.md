@@ -6,7 +6,7 @@ This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to a
 
 ## Adding new public channels
 
-1. Create the channel in Slack. The channel name should end in `-public`, so that it's explicit that non-staff are present.
+1. [Create the channel in Slack](https://get.slack.help/hc/en-us/articles/201402297-Creating-a-channel). The channel name should end in `-public`, so that it's explicit that non-staff are present.
 1. Send a pull request [adding the new channel](https://github.com/18F/chat/edit/master/channels.js), including the following information:
     * The reasoning for creating the channel
     * Who will be the moderators
