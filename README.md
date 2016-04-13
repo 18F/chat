@@ -2,6 +2,16 @@
 
 This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to allow the public to join 18F's Slack channels.
 
+*It only makes sense to use this repository directly if you are 18F staff, but the implementation may be useful to fork for others.*
+
+## Adding new public channels
+
+1. Create the channel in Slack. The channel name should end in `-public`, so that it's explicit that non-staff are present.
+1. Send a pull request [adding the new channel](https://github.com/18F/chat/edit/master/channels.js), including the following information:
+    * The reasoning for creating the channel
+    * Who will be the moderators
+1. Drop the link to the pull request into #wg-opensource.
+
 ## Setup
 
 ### Local
@@ -11,12 +21,13 @@ This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to a
 1. Run
 
     ```bash
+    npm install
     SLACK_API_TOKEN=... node index.js
     ```
 
 ### Production
 
-**18F staff:** To deploy changes to [cloud.gov](https://cloud.gov/), run:
+To deploy changes to [cloud.gov](https://cloud.gov/), run:
 
 ```bash
 cf target -o 18F -s chat
