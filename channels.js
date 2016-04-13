@@ -4,5 +4,6 @@ module.exports = [
   'federalist-public',
   'open-data-maker-pub',
   'openopps-public',
-  'sf-public'
+  'sf-public',
+  'opensource-public'
 ];
