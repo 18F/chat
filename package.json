@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "slackin": "^0.8.3"
+    "slackin": "18F/slackin#link-to-channel"
   }
 }

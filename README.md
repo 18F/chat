@@ -12,6 +12,8 @@ This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to a
     * Who will be the moderators
 1. Drop the link to the pull request into #wg-opensource.
 
+Once merged and [deployed](#production), you can link to `https://chat.18f.gov/?channel=<name>` from your project/repository/etc.
+
 ## Setup
 
 ### Local
