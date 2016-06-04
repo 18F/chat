@@ -1,6 +1,6 @@
 # chat.18f.gov
 
-This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to allow the public to join 18F's Slack channels.
+This is a small wrapper around [slackin](https://github.com/rauchg/slackin) to allow the public to join 18F's Slack channels. Currently, this tool is down for some internal IT reasons, but should be back up soon.
 
 *It only makes sense to use this repository directly if you are 18F staff, but the implementation may be useful to fork for others.*
 
