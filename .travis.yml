@@ -1,0 +1,17 @@
+language: bash
+
+env:
+  global:
+  - secure: "WQAW0EZ7RPOGJmMDv+mW8rTojg/XpTJPyQTY71bEg6WR7M5iGhd5rB9KKRCVWqGwj/cwHm8MF1zC4QuCrGursKecOBF/HeGj9ZmYCReKCN3P6CQ8FeAu0iqoF2/0PL3uL9eCaMADNuwe1yo8FtJ2X9f18VPtDAx3cS8aqyTcR9+ifLdf9/7HcHnLwGADUrMoCLfMSQv9/ldG0h9qZZkVZXGQcLtFKauJft1AU3ck52lU1yRye7QtAK91hF9qilohJkHuRcB2bUJM2HVLAAO4CTjWm/gd9KZ2VhfsVVvF74zvdDvm2MjQqYSXyDtxEhTkmzDXOh+5LOqY1NPf2s4sBrQ5ivTHyOSGfy7wYG3lfK0dCibVa3zZJy5zOlU16oHriYM8EMZSU7xwv5yv0b246NI8/O7zUG2ylPIfLkrWse+Pgqeic/PQOQ0XHVR26n8sQET6e+rPoRvC9Zbftjco9z9zZRy90Z5sImovvogC1BP75jszTFRnp4WEjNH/KFD5ZWfC+ugZaQLDBs/rp6Zhk1x/J4vCHVCZHhqS9vGXI4tND2LgK7Vxgl+PJxVPVFu5lCYmHXPGjSq9xL6mhWUWb5QDw6DJGoKJnJUCz4jHC+5EOaryLm1j2104D/pqDPWQDL7asXyVxj9ud17Is9caIhQlnARY+tA8nX2b4L1d1fY="
+  - secure: "jZb2gjfoxh8rLo9FRib+fMIf866m9xmzkYAOkUd3e+XVlix6wITx5Hzrts6bOJfYi7MDvub5U3gpydRbPmJe/CrnVgjOnOzlIN3yIL/BI5zxSqmcvp+I/yFYohV1TbgdHSOb4OgZMx7zEcYbT8iSapH5uaCQPGAPTvI+Hl5w26Ah9fvxQKZcbt7jS/EyFMWPJHcAeLVZLsJV0nHTumRMp8WWQAxfkJeoPfnraFcq3Ob8UllDuvI6QYG+kMWHwyRd66bRr3THdhKUB9zwQZyPH15jYLx6DQu91su++tGJe+sKoezc1t1Eq4N4Noxz2JvxsxJKL3FfOzXM/0n6U6CKYCkDSmAVOcl2GyvojiBp/5PNpleNgED/UQzSpKesdbVE9Lk3NNpiVFyHkqGxWCR7w1sl+VFVJkA1GkwEw1CplaCKcOv7d3M/qkIF1B2Ks2gEJqgAoXCx43+xca8APH5sTwu7tMDzWVbcczunvRB++HOfuXVBrSxT6ICUiIBg3UwESJOkbUdO7a464wjrGcNRoASzjGEXcsFw2XkpjHE0VChVwVR8rKuJaXp4GkeDePeLVCF85wqEIK/MPH8v99HKTWgbSmIENcW17d+rUWdGYp5ftSrgRRsYu9vc8HdIjeEgj8SOkXuI842TVB1jiaDZHdYoH0nnG+aQj+SnLNtIBAs="
+
+before_deploy:
+- export PATH=$HOME:$PATH
+- travis_retry curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx -C $HOME
+- cf install-plugin autopilot -f -r CF-Community
+
+deploy:
+- provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
