@@ -1,8 +1,0 @@
-applications:
-- name: chat
-  host: chat
-  domain: 18f.gov
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  memory: 64M
-  env:
-    FORCE_HTTPS: true

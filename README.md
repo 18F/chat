@@ -1,6 +1,6 @@
 # chat.18f.gov
 
-This site allows the general public to request access to 18F's public chat rooms by submitting a Google Form. This used to use [slackin](https://github.com/rauchg/slackin), but was converted to this simpler format for security reasons (doesn't require any permissions).
+This site allows the general public to request access to 18F's public chat rooms by submitting a Google Form. This used to use [slackin](https://github.com/rauchg/slackin), but was converted to this simpler format for security reasons (doesn't require any permissions). It is hosted on Federalist.
 
 ## Adding new public channels
 
